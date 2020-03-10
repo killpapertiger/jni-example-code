@@ -8,6 +8,12 @@ start.c通过jni调用Proj.java中的函数
 /usr/local/jdk1.8.0_161/bin/javac Prog.java
 编译start
 gcc start.c -o start -I /usr/local/jdk1.8.0_161/include/ -I /usr/local/jdk1.8.0_161/include/linux/ -L /usr/local/jdk1.8.0_161/jre/lib/amd64/server/ -ljvm -Wl,-rpath,/usr/local/jdk1.8.0_161/jre/lib/amd64/server
+
+
+
+
+
+
 需要注意，编译start时候指定的jdk(libjvm)和编译Proj.java的编译器javac版本相同。
 比如如下问题
 https://www.cnblogs.com/saule/p/11358085.html
