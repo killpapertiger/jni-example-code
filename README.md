@@ -1,12 +1,17 @@
 # jni-example-code
 jni-example
+
 用途：
+
 start.c通过jni调用Proj.java中的函数
 
 步骤：
 先编译java，因为start.c中需要用到该类
+
 /usr/local/jdk1.8.0_161/bin/javac Prog.java
+
 编译start
+
 gcc start.c -o start -I /usr/local/jdk1.8.0_161/include/ -I /usr/local/jdk1.8.0_161/include/linux/ -L /usr/local/jdk1.8.0_161/jre/lib/amd64/server/ -ljvm -Wl,-rpath,/usr/local/jdk1.8.0_161/jre/lib/amd64/server
 
 
